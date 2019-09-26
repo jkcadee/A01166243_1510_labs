@@ -1,18 +1,18 @@
-from random import randrange, sample
+import random
 
 
 def roll_dice(number_of_rolls, number_of_sides):
-    random_number = randrange((number_of_rolls / number_of_rolls), ((number_of_sides * number_of_rolls) + 1))
-    return random_number
+    dice_roll = random.randint(number_of_rolls, (number_of_rolls * number_of_sides))
+    return dice_roll
 
 
 def create_name(length):
-    sample()
+
     return
 
 
 def main():
-    print(roll_dice(1, 20))
+    print(roll_dice(3, 6))
     return
 
 
