@@ -21,7 +21,11 @@ def create_name(length):
     """Creates a string as long as the number in the parameter"""
     letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     selected_letters = random.sample(letters, length)
-    selected_letters = selected_letters[0] + selected_letters[1] + selected_letters[2]
+    selected_letters = selected_letters[0] \
+        + selected_letters[1] \
+        + selected_letters[2] \
+        + selected_letters[3] \
+        + selected_letters[4]
     return selected_letters.capitalize()
 
 
@@ -38,7 +42,7 @@ Return a string the length of the parameter.
 def main():
     """Executes the program"""
     print(roll_dice(3, 6))
-    print(create_name(3))
+    print(create_name(5))
     return
 
 
