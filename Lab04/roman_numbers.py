@@ -43,32 +43,6 @@ Return the remainder of two numbers.
 :postcondition: Take the remainder of number_1 divided by number_2
 :return: The remainder of number_1 and number_2
 """
-m = 1000
-# Every 1000
-cm = 900
-# Every 900
-d = 500
-# Every 500
-cd = 400
-# Every 400
-c = 100
-# Every 100
-xc = 90
-# Every 90
-l = 50
-# Every 50
-xl = 40
-# Every 40
-x = 10
-# Every 10
-ix = 9
-# Every 9
-v = 5
-# Every 5
-iv = 4
-# Every 4
-i = 1
-# Every 1
 
 
 def convert_to_roman_numeral(positive_int):
@@ -79,6 +53,33 @@ def convert_to_roman_numeral(positive_int):
         >>> convert_to_roman_numeral(90)
         'XC'
         """
+    m = 1000
+    # Every 1000
+    cm = 900
+    # Every 900
+    d = 500
+    # Every 500
+    cd = 400
+    # Every 400
+    c = 100
+    # Every 100
+    xc = 90
+    # Every 90
+    l = 50
+    # Every 50
+    xl = 40
+    # Every 40
+    x = 10
+    # Every 10
+    ix = 9
+    # Every 9
+    v = 5
+    # Every 5
+    iv = 4
+    # Every 4
+    i = 1
+    # Every 1
+
     if positive_int >= m:
         num_of_m = divisor_for_roman_numeral(positive_int, m)
         positive_int = remainder_number(positive_int, m)
