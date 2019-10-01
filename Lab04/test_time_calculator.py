@@ -11,5 +11,3 @@ class TestTimeCalculator(TestCase):
         self.assertEqual('0 days, 1 hours, 0 minutes, 0 seconds.', time_calculator(3600))
         self.assertEqual('0 days, 23 hours, 59 minutes, 59 seconds.', time_calculator(86399))
         self.assertEqual('1 days, 0 hours, 0 minutes, 0 seconds.', time_calculator(86400))
-
-    
