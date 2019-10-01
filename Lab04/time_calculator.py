@@ -43,9 +43,7 @@ Return the remainder of the two parameters divided by each other.
 :postcondition: Take the remainder of seconds divided by conversion
 :return: The remainder of the two parameters divided by each other
 """
-seconds_in_day = 86400
-seconds_in_hour = 3600
-seconds_in_minute = 60
+
 
 
 def time_calculator(seconds):
@@ -55,6 +53,10 @@ def time_calculator(seconds):
     >>> time_calculator(590)
     '0 days, 0 hours, 9 minutes, 50 seconds.'
     """
+    seconds_in_day = 86400
+    seconds_in_hour = 3600
+    seconds_in_minute = 60
+
     if seconds >= seconds_in_day:
         days = seconds_conversion(seconds, seconds_in_day)
         seconds = remainder_seconds(seconds, seconds_in_day)

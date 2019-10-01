@@ -1,7 +1,8 @@
 from unittest import TestCase
 from A01166243_1510_labs.Lab04.roman_numbers import convert_to_roman_numeral
 
-class TestConvert_to_roman_numeral(TestCase):
+
+class TestConvertToRomanNumeral(TestCase):
     def test_convert_to_roman_numeral(self):
         self.assertEqual('I', convert_to_roman_numeral(1))
         self.assertEqual('MMMMMMMMMM', convert_to_roman_numeral(10000))
