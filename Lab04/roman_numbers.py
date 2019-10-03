@@ -178,7 +178,7 @@ def convert_to_roman_numeral(positive_int):
 Return the parameter converted into roman numerals.
 
 :param positive_int: int
-:precondition: Parameter must be a positive int
+:precondition: Parameter must be a positive int and must be a number from 1 to 10000
 :postcondition: Print a string that is equivalent to the parameter
 :return: A string equivalent to the parameter
 """
