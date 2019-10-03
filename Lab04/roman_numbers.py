@@ -17,7 +17,7 @@ Return the quotient of two numbers.
 
 :param number_1: int
 :param number_2: int
-:precondition: Both parameters must be an int
+:precondition: Both parameters must be a positive int
 :postcondition: Divide number_1 by number_2
 :return: The quotient of number_1 and number_2
 """
@@ -39,7 +39,7 @@ Return the remainder of two numbers.
 
 :param number_1: int
 :param number_2: int
-:precondition: Both parameters must be an int
+:precondition: Both parameters must be a positive int
 :postcondition: Take the remainder of number_1 divided by number_2
 :return: The remainder of number_1 and number_2
 """
@@ -178,7 +178,7 @@ def convert_to_roman_numeral(positive_int):
 Return the parameter converted into roman numerals.
 
 :param positive_int: int
-:precondition: Parameter must be an int
+:precondition: Parameter must be a positive int
 :postcondition: Print a string that is equivalent to the parameter
 :return: A string equivalent to the parameter
 """

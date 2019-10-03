@@ -18,7 +18,7 @@ Return the quotient of the two parameters.
 
 :param seconds: int 
 :param conversion: int
-:precondition: Both parameters must be an int
+:precondition: Both parameters must be a positive int
 :postcondition: Divide seconds by conversion
 :return: The quotient of the two parameters
 """
@@ -39,7 +39,7 @@ Return the remainder of the two parameters divided by each other.
 
 :param seconds: int
 :param conversion: int
-:precondition: Both parameters must be an int
+:precondition: Both parameters must be a positive int
 :postcondition: Take the remainder of seconds divided by conversion
 :return: The remainder of the two parameters divided by each other
 """
@@ -103,7 +103,7 @@ def time_calculator(seconds):
 Return the amount of seconds converted into days, hours, minutes and seconds.
 
 :param seconds: int
-:precondition: Parameter must be an int
+:precondition: Parameter must be a positive int
 :postcondition: Convert the number in parameter, seconds, into a string which displays days, hours, minutes and seconds
 :return: A string with the parameter, seconds, converted into days, hours, minutes and seconds 
 """
