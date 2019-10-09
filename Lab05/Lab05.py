@@ -14,4 +14,22 @@ def roll_die(number_of_rolls, number_of_sides):
 
 
 def choose_inventory(inventory, selection):
-    inventory = []
+    if inventory == [] and selection == 0:
+        return []
+    elif selection < 0:
+        print("Hey! You can't have negative items!")
+        return []
+    elif selection > len(inventory):
+        print("You are over encumbered.")
+        return sorted(inventory).copy()
+    elif selection == len(inventory):
+        return sorted(inventory).copy()
+    else:
+        result = random.choices(inventory, k=selection)
+        return sorted(result)
+
+
+print(choose_inventory(['Sword', 'Dagger', 'Bow', 'Arrows', 'Leather Armour', 'Chainmail', 'Shield', 'Potions'], 4))
+
+
+# 'Sword', 'Dagger', 'Bow', 'Arrows', 'Leather Armour', 'Chainmail', 'Shield', 'Potions'
