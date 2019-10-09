@@ -54,3 +54,24 @@ def generate_name(syllables):
 
 
 # print(generate_name(2))
+
+def create_character(name_length):
+    if name_length < 0:
+        return "No strength of magic can make a name have less than zero characters."
+    strength = ['Strength:', roll_die(3, 6)]
+    dexterity = ['Dexterity:', roll_die(3, 6)]
+    constitution = ['Constitution:', roll_die(3, 6)]
+    intelligence = ['Intelligence:', roll_die(3, 6)]
+    wisdom = ['Wisdom:', roll_die(3, 6)]
+    charisma = ['Charisma:', roll_die(3, 6)]
+    character_list = [generate_name(name_length), strength, dexterity, constitution, intelligence, wisdom, charisma]
+    return character_list
+
+
+# print(create_character(1))
+
+def print_character(character):
+    print(create_character(character))
+
+
+# print_character(2)
