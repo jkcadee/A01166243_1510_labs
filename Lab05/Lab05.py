@@ -29,7 +29,28 @@ def choose_inventory(inventory, selection):
         return sorted(result)
 
 
-print(choose_inventory(['Sword', 'Dagger', 'Bow', 'Arrows', 'Leather Armour', 'Chainmail', 'Shield', 'Potions'], 4))
-
-
+# print(choose_inventory(['Sword', 'Dagger', 'Bow', 'Arrows', 'Leather Armour', 'Chainmail', 'Shield', 'Potions'], 4))
 # 'Sword', 'Dagger', 'Bow', 'Arrows', 'Leather Armour', 'Chainmail', 'Shield', 'Potions'
+
+def generate_consonant():
+    consonant = "BCDFGHJKLMNPQRSTVWXYZ"
+    return random.sample(consonant, 1)
+
+
+def generate_vowel():
+    vowel = "AEIOUY"
+    return random.sample(vowel, 1)
+
+
+def generate_syllable():
+    syllable = generate_consonant() + generate_vowel()
+    return syllable
+
+
+def generate_name(syllables):
+    name = generate_syllable() * syllables
+    result = ''.join(name).capitalize()
+    return result
+
+
+# print(generate_name(2))
