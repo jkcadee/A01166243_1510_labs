@@ -35,9 +35,11 @@ def choose_inventory(inventory, selection):
         return []
     elif selection > len(inventory):
         print("You are over encumbered.")
-        return sorted(inventory).copy()
+        over_encumbered_list = inventory.copy()
+        return sorted(over_encumbered_list)
     elif selection == len(inventory):
-        return sorted(inventory).copy()
+        equal_list = inventory.copy()
+        return sorted(equal_list)
     else:
         result = random.choices(inventory, k=selection)
         return sorted(result)
@@ -148,8 +150,10 @@ Return a list with the name of the character and their stats.
 
 def print_character(character, i, s):
     """Prints character."""
-    print(create_character(character))
-          # .append(choose_inventory(i, s)))
+    character_list = create_character(character)
+    inventory_list = choose_inventory(i, s)
+    character_list.append(inventory_list)
+    print(character_list)
 
 
 """

@@ -21,7 +21,7 @@ def main():
     print(generate_syllable())
     print(generate_name(2))
     print(create_character(2))
-    print_character(2)
+    print_character(2, inventory, 3)
 
 
 if __name__ == "__main__":
