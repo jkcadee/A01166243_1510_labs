@@ -15,3 +15,9 @@ class TestRollDie(TestCase):
 
     def test_roll_die_3(self):
         self.assertEqual(20, roll_die(4, 8))
+
+    def test_roll_die_0(self):
+        self.assertEqual(0, roll_die(0, 1))
+
+    
+
