@@ -1,6 +1,7 @@
 import random
 import doctest
 
+
 def roll_die(number_of_rolls, number_of_sides):
     """Rolls a die with an inputted amount of rolls and sides."""
     number = 0
