@@ -1,5 +1,5 @@
 import random
-
+import doctest
 
 def roll_die(number_of_rolls, number_of_sides):
     """Rolls a die with an inputted amount of rolls and sides."""
@@ -27,7 +27,18 @@ Return the sum of a integer created from a set of random numbers based on the nu
 
 
 def choose_inventory(inventory, selection):
-    """Chooses an amount of items from a list depending on the number inputted."""
+    """Chooses an amount of items from a list depending on the number inputted.
+    >>> choose_inventory([], 0)
+    []
+    >>> choose_inventory(['Sword'], -1)
+    Hey! You can't have negative items!
+    []
+    >>> choose_inventory(['Sword'], 2)
+    You are over encumbered.
+    ['Sword']
+    >>> choose_inventory(['Sword'], 1)
+    ['Sword']
+    """
     if inventory == [] and selection == 0:
         return []
     elif selection < 0:
@@ -166,3 +177,6 @@ Print a list with a name the length of the parameter and the stats.
 """
 
 # print_character(2)
+
+if __name__ == "__main__":
+    doctest.testmod()
