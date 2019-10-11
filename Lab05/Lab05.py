@@ -3,7 +3,10 @@ import doctest
 
 
 def roll_die(number_of_rolls, number_of_sides):
-    """Rolls a die with an inputted amount of rolls and sides."""
+    """Rolls a die with an inputted amount of rolls and sides.
+    >>> roll_die(0, 0)
+    0
+    """
     number = 0
     if number_of_rolls < 1 or number_of_sides <= 1:
         return 0
