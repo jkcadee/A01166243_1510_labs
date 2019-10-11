@@ -174,7 +174,6 @@ def print_character(character):
                     print(character[value][x])
 
 
-
 """
 Print a list with a name the length of the parameter and the stats.
 
