@@ -4,14 +4,9 @@ import random
 
 
 class TestGenerateConsonant(TestCase):
-    def test_generate_consonant_1(self):
-        random.seed(14)
-        self.assertEqual(['F'], generate_consonant())
+    def test_is_consonant_is_in(self):
+        consonant = "BCDFGHJKLMNPQRSTVWXYZ"
+        self.assertTrue(''.join(generate_consonant()) in consonant)
 
-    def test_generate_consonant_2(self):
-        random.seed(72)
-        self.assertEqual(['D'], generate_consonant())
-
-    def test_generate_consonant_3(self):
-        random.seed(5)
-        self.assertEqual(['Y'], generate_consonant())
+    def test_is_consonant_length(self):
+        self.assertTrue(len(generate_consonant()) == 1, generate_consonant())
