@@ -136,8 +136,6 @@ Return a string created by calling generate_syllable the amount of times syllabl
 
 def create_character(name_length):
     """Creates a list with a character's name and stats."""
-    if name_length < 0:
-        return "No strength of magic can make a name have less than zero characters."
     strength = ['Strength:', roll_die(3, 6)]
     dexterity = ['Dexterity:', roll_die(3, 6)]
     constitution = ['Constitution:', roll_die(3, 6)]
@@ -157,15 +155,21 @@ Return a list with the name of the character and their stats.
 :return: A list with a name and stats.
 """
 
+
 # print(create_character(1))
 
 
-def print_character(character, i, s):
+def print_character(character):
     """Prints character."""
-    character_list = create_character(character)
-    inventory_list = choose_inventory(i, s)
-    character_list.append(inventory_list)
-    print(character_list)
+    print(character[0])
+    for value in range(1, len(character)):
+        if len(character[value]) > 0:
+            if value < len(character) - 1:
+                print(character[value][0], character[value][1])
+            else:
+                for x in range(0, len(character[value])):
+                    print(character[value][x])
+
 
 
 """
