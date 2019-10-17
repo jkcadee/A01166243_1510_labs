@@ -1,11 +1,21 @@
 def sparse_add(dict1, dict2):
-    for each_key, each_value in dict1.items() and dict2.items():
-        if each_key == each_key:
-            updated_vector = dict1[each_key] + dict2[each_key]
-            new_sum_dict = {**dict1, **dict2}
-            return new_sum_dict
+    new_dict = dict()
+    for key in dict1:
+        if key in dict2:
+            new_dict[key] = dict1[key] + dict2[key]
         else:
-            return {**dict1, **dict2}
+            new_dict[key] = dict1[key]
+    for key in dict2:
+        if key not in new_dict:
+            new_dict[key] = dict2[key]
+    sorted_keys = sorted(new_dict)
+    sorted_dict = {}
+    for index in sorted_keys:
+        if new_dict[index] == 0:
+            continue
+        sorted_dict[index] = new_dict[index]
+    return sorted_dict
 
 
-print(sparse_add({'A': 2, 'B': 3}, {'A': 4, 'C': 4}))
+print(sparse_add({1: 2, 2: 3, 6: 7}, {1: -2, 3: 4, 4: 4}))
+
