@@ -1,3 +1,5 @@
+# This function only works if there are no leading or trailing zeros if you need to measure the actual length of the
+# sparse vector.
 import doctest
 
 
