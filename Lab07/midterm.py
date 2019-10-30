@@ -34,4 +34,4 @@ def multiples_of_3(upper_bound):
     return sum_of_values
 
 
-print(multiples_of_3(10))
+# print(multiples_of_3(10))
