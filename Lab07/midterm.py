@@ -26,12 +26,9 @@ def prepender(l_string, string2):
 
 
 def multiples_of_3(upper_bound):
-    every_value = [v for v in range(0, upper_bound)]
-    sum_of_multiples = [x for x in every_value if x % 3 == 0]
-    sum_of_values = 0
-    for i in range(0, len(sum_of_multiples)):
-        sum_of_values += sum_of_multiples[i]
-    return sum_of_values
+    sum_of_multiples = [x for x in range(0, upper_bound) if x % 3 == 0]
+    return sum(sum_of_multiples)
 
 
-# print(multiples_of_3(10))
+# inefficient?
+print(multiples_of_3(10))
