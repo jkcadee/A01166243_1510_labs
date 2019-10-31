@@ -10,8 +10,7 @@ class TestCutoff(TestCase):
         self.assertEqual(0, cutoff([], 5))
 
     def test_cutoff_zero_0(self):
-        with self.assertRaises(ZeroDivisionError):
-            cutoff([0], 0)
+        self.assertRaises(ZeroDivisionError, cutoff, [0], 0)
 
     def test_cutoff_zero_5(self):
         self.assertEqual(1, cutoff([0], 5))
@@ -23,8 +22,7 @@ class TestCutoff(TestCase):
         self.assertEqual(0, cutoff([2], 4))
 
     def test_cutoff_five_len_list_0(self):
-        with self.assertRaises(ZeroDivisionError):
-            cutoff([1, 2, 3, 4, 5], 0)
+        self.assertRaises(ZeroDivisionError, cutoff, [1, 2, 3, 4, 5], 0)
 
     def test_cutoff_five_len_list_2(self):
         self.assertEqual(2, cutoff([1, 2, 3, 4, 5], 2))

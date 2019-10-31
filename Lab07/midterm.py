@@ -126,8 +126,9 @@ def main():
     print(sorted(name_list().items()))
     print(multiples_of_3(10))
     print(roll_the_die())
+    doctest.testmod()
 
 
 if __name__ == "__main__":
     main()
-    doctest.testmod()
+
