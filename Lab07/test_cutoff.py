@@ -14,7 +14,7 @@ class TestCutoff(TestCase):
             cutoff([0], 0)
 
     def test_cutoff_zero_5(self):
-        self.assertEqual(0, cutoff([0], 5))
+        self.assertEqual(1, cutoff([0], 5))
 
     def test_cutoff_two_2(self):
         self.assertEqual(1, cutoff([2], 2))
@@ -33,7 +33,7 @@ class TestCutoff(TestCase):
         self.assertEqual(5, cutoff([2, 2, 2, 2, 2], 2))
 
     def test_cutoff_five_len_list_2_10(self):
-        self.assertEqual(2, cutoff([2, 2, 2, 2, 2], 10))
+        self.assertEqual(0, cutoff([2, 2, 2, 2, 2], 10))
 
     def test_cutoff_five_len_list_3_3(self):
         self.assertEqual(5, cutoff([3, 6, 9, 12, 15], 3))
