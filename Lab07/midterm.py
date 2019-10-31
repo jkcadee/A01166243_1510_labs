@@ -100,8 +100,8 @@ def tally_and_roll_the_die():
 
     :precondition: The inputted values for number_of_sides and number_of_rolls must be over 0.
     :postcondition: Roll a die until it has been rolled the specified amount of times and store each time a side is
-    rolled as a counted value in the dictionary
-    :return: Print a dictionary that signifies how many times a side has been rolled.
+    rolled as a counted value in the dictionary.
+    :postcondition: Print a dictionary that signifies how many times a side has been rolled.
     """
     number_of_sides = int(input('Number of sides: '))
     number_of_rolls = int(input('Number of rolls: '))
