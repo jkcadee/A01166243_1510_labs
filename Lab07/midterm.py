@@ -95,7 +95,7 @@ def multiples_of_3(upper_bound):
     return sum([x for x in range(0, upper_bound) if x % 3 == 0])
 
 
-def roll_the_die():
+def tally_and_roll_the_die():
     """Prints a dictionary that signifies how many times a particular side has been rolled.
 
     :precondition: The inputted values for number_of_sides and number_of_rolls must be over 0.
@@ -125,7 +125,7 @@ def main():
     print(a_string)
     print(sorted(name_list().items()))
     print(multiples_of_3(10))
-    print(roll_the_die())
+    print(tally_and_roll_the_die())
     doctest.testmod()
 
 
