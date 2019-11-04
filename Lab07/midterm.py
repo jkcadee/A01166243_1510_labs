@@ -92,7 +92,7 @@ def multiples_of_3(upper_bound):
     >>> multiples_of_3(2)
     0
     """
-    return sum([x for x in range(0, upper_bound) if x % 3 == 0])
+    return sum([x for x in range(upper_bound) if x % 3 == 0])
 
 
 def tally_and_roll_the_die():
