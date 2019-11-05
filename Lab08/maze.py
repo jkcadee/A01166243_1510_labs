@@ -65,7 +65,8 @@ def game():
         display_board(board, character_list)
         character_list = validate_move(5, character_list, user_choice())
         if character_list == check_exit_reached(5, 5):
-            print('You won!')
+            display_board(board, character_list)
+            print('\n You won!')
             found_exit = True
 
 
