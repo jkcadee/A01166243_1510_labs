@@ -19,19 +19,26 @@ def user_choice():
 
 
 def move_character(character_coords, maximum, pos, direction):
-    if direction == ('N' or 'W'):
+    if direction in ('N', 'W'):
         if character_coords[pos] != 0:
             character_coords[pos] -= 1
-    elif direction == ('S' or 'E'):
-        if character_coords[pos] != maximum:
+    elif direction in ('S', 'E'):
+        if character_coords[pos] != maximum - 1:
             character_coords[pos] += 1
+    return character_coords
 
 
 def validate_move(maximum, character, direction):
-    if direction == ('N' or 'S'):
-        move_character(character, maximum, 0, direction)
-    elif direction == ('E' or 'W'):
-        move_character(character, maximum, 1, direction)
+    if direction in ('N', 'S'):
+        character = move_character(character, maximum, 0, direction)
+    elif direction in ('E', 'W'):
+        character = move_character(character, maximum, 1, direction)
+    return character
+
+
+def check_exit_reached(minimum, maximum):
+    the_exit = [minimum - 1, maximum - 1]
+    return the_exit
 
 
 def display_board(board, character):
@@ -53,10 +60,13 @@ def display_board(board, character):
 def game():
     character_list = make_character(0, 0)
     board = make_board(5, 5)
-    while True:
+    found_exit = False
+    while not found_exit:
         display_board(board, character_list)
         character_list = validate_move(5, character_list, user_choice())
-
+        if character_list == check_exit_reached(5, 5):
+            print('You won!')
+            found_exit = True
 
 
 def main():
