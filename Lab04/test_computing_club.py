@@ -6,7 +6,7 @@ from A01166243_1510_labs.Lab04.computing_club import number_generator
 import io
 
 
-class TestGet_input(TestCase):
+class TestGetInput(TestCase):
     @patch('builtins.input', side_effect=[10])
     def test_get_input(self, mock_input):
         actual_value = get_input()
@@ -14,7 +14,7 @@ class TestGet_input(TestCase):
         self.assertEqual(expected_output, actual_value)
 
 
-class TestPrint_number(TestCase):
+class TestPrintNumber(TestCase):
     @patch('sys.stdout', new_callable=io.StringIO)
     def test_print_number(self, mock_stdout):
         expected_output = "10\n"
@@ -22,7 +22,7 @@ class TestPrint_number(TestCase):
         self.assertEqual(mock_stdout.getvalue(), expected_output)
 
 
-class TestNumber_generator(TestCase):
+class TestNumberGenerator(TestCase):
     @patch('random.randint', return_value=50)
     def test_number_generator(self, mock_random):
         actual_value = number_generator()
