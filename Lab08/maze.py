@@ -81,8 +81,8 @@ def move_character(character_coords: list, maximum: int, pos: int, direction: st
     [0, 0]
     >>> move_character([0, 0], 5, 1, 'W')
     [0, 0]
-    >>> move_character([0, 0], 5, 1, 'E')
-    [0, 1]
+    >>> move_character([0, 0], 5, 0, 'E')
+    [1, 0]
     """
     if direction in ('N', 'W'):
         if character_coords[pos] != 0:
