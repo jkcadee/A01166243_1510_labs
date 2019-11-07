@@ -3,7 +3,7 @@ import doctest
 
 def make_board(row_size: int, column_size: int) -> list:
     """
-    Returns a game board with rows of lists that contain tuples by index (x, y).
+    Return a game board with rows of lists that contain tuples by index (x, y).
 
     :param row_size: Int.
     :precondition: Must be an integer.
@@ -28,7 +28,7 @@ def make_board(row_size: int, column_size: int) -> list:
 
 def make_character(x_coord: int, y_coord: int) -> list:
     """
-    Returns a character list with an x-coord and a y-coord in it.
+    Return a character list with an x-coord and a y-coord in it.
 
     :param x_coord: Int.
     :precondition: Must be an integer >= 0.
@@ -48,7 +48,7 @@ def make_character(x_coord: int, y_coord: int) -> list:
 
 def user_choice():
     """
-    Returns a user input of N, S, E, W.
+    Return a user input of N, S, E, W.
 
     :precondition: Input must be N, S, E, W.
     :postcondition: Returns the input capitalized.
@@ -60,7 +60,7 @@ def user_choice():
 
 def move_character(character_coords: list, maximum: int, pos: int, direction: str) -> list:
     """
-    Returns a list of changed character coordinates. The function also checks if the move is valid.
+    Return a list of changed character coordinates. The function also checks if the move is valid.
 
     N and W always subtract 1 from the position, and S and E always add one to the position.
 
@@ -95,7 +95,7 @@ def move_character(character_coords: list, maximum: int, pos: int, direction: st
 
 def validate_move(maximum: int, character: list, direction: str) -> list:
     """
-    Returns a list with the modified character list from move_character.
+    Return a list with the modified character list from move_character.
 
     When direction is N or S, 1 is added or subtracted from the y-coord. When direction is E or W, 1 is added or
     subtracted from the x-coord,
@@ -127,7 +127,7 @@ def validate_move(maximum: int, character: list, direction: str) -> list:
 
 def check_exit_reached(minimum: int, maximum: int) -> list:
     """
-    Returns a list containing the minimum and maximum coord for the exit.
+    Return a list containing the minimum and maximum coord for the exit.
 
     :param minimum: An int.
     :precondition: Must be an integer.
@@ -147,7 +147,7 @@ def check_exit_reached(minimum: int, maximum: int) -> list:
 
 def display_board(board: list, character: list):
     """
-    Prints an 'x' for an empty space, and a 'c' for where the character is.
+    Print an 'x' for an empty space, and a 'c' for where the character is.
 
     :param board: A list.
     :precondition: Must be a list.
@@ -179,7 +179,7 @@ def display_board(board: list, character: list):
 
 def game():
     """
-    Runs the game functions with the logic to create the scenario.
+    Run the game functions with the logic to create the scenario.
 
     :return: When the exit is reached, printing 'You won!' and ending the infinite loop.
     """
@@ -196,7 +196,7 @@ def game():
 
 
 def main():
-    """Runs the functions."""
+    """Run the functions."""
     game()
     doctest.testmod()
 
