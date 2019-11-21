@@ -46,7 +46,11 @@ def eratothenes(upperbound: int) -> list:
     []
     >>> eratothenes(10)
     [2, 3, 5, 7]
+    >>> eratothenes(-1)
+    Wrong input!
     """
+    if upperbound <= 0:
+        print("Wrong input!")
     all_numbers = [i for i in range(0, upperbound + 1)]
     all_numbers.remove(0)
     all_numbers.remove(1)
