@@ -2,13 +2,20 @@ import time
 
 
 def timer(function):
+    """Write the runtime of the decorated function in results.txt.
+
+    :param function: Function.
+    :precondition: Must be a function.
+    :postcondition: Writes the runtime of the decorated function.
+    :return: The wrapper function.
+    """
     def wrapper(*args, **kwargs):
         start = time.perf_counter()
         value = function(*args, **kwargs)
         end = time.perf_counter()
         run_time = end - start
         with open('result.txt', 'a+') as file_object:
-            file_object.write(f"{run_time:.9f} seconds - {function.__name__!r}\n")
+            file_object.write(f"{run_time:.9f} seconds - {function.__name__!r} with {str(args).replace(',', '')}\n")
         return value
     return wrapper
 
@@ -51,8 +58,10 @@ def factorial_recursive(upper):
 
 
 def main():
-    factorial_iterative(500)
-    factorial_recursive(995)
+    """Runs the functions in the program."""
+    for number in range(1, 101):
+        factorial_iterative(number)
+        factorial_recursive(number)
 
 
 if __name__ == '__main__':
