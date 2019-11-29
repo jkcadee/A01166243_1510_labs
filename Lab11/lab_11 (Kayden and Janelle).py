@@ -42,6 +42,11 @@ def factorial_recursive_helper(num):
     :param num: Integer.
     :precondition: Num must be positive.
     :return: The factorial of num.
+
+    >>> factorial_recursive_helper(5)
+    120
+    >>> factorial_recursive_helper(10)
+    3628800
     """
     return num * factorial_recursive_helper(num - 1) if num > 1 else num
 
