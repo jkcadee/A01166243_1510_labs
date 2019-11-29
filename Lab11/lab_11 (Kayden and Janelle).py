@@ -15,7 +15,8 @@ def timer(function):
         end = time.perf_counter()
         run_time = end - start
         with open('result.txt', 'a+') as file_object:
-            file_object.write(f"{run_time:.9f} seconds - {function.__name__!r} with {str(args).replace(',', '')}\n")
+            file_object.write(f"{run_time:.9f} seconds - {function.__name__!r} calculated that "
+                              f"{str(args).replace(',', '')[1:-1]}! = {value}\n")
         return value
     return wrapper
 
