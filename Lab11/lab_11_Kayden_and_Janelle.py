@@ -5,7 +5,7 @@ def timer(function):
     """Write the runtime of the decorated function in results.txt.
 
     :param function: Function.
-    :precondition: Must be a function.
+    :precondition: Function must be a function.
     :postcondition: Writes the runtime of the decorated function.
     :return: The wrapper function.
     """
@@ -15,7 +15,8 @@ def timer(function):
         end = time.perf_counter()
         run_time = end - start
         with open('result.txt', 'a+') as file_object:
-            file_object.write(f"{run_time:.9f} seconds - {function.__name__!r} with {str(args).replace(',', '')}\n")
+            file_object.write(f"{run_time:.9f} seconds - {function.__name__!r} calculated that "
+                              f"{str(args).replace(',', '')[1:-1]}! = {value}\n")
         return value
     return wrapper
 
@@ -25,7 +26,7 @@ def factorial_iterative(upper):
     """Calculate the factorial of the upper number using iteration.
 
     :param upper: Integer.
-    :precondition: Upper must be positive.
+    :precondition: Upper must be a positive integer.
     :return: The factorial of upper.
     """
     result = 1
@@ -40,7 +41,7 @@ def factorial_recursive_helper(num):
     """Calculate the factorial of the upper number using recursion.
 
     :param num: Integer.
-    :precondition: Num must be positive.
+    :precondition: Num must be a positive integer.
     :return: The factorial of num.
 
     >>> factorial_recursive_helper(5)
@@ -56,7 +57,7 @@ def factorial_recursive(upper):
     """Calculate the factorial of the upper number using recursion.
 
     :param upper: Integer.
-    :precondition: Upper must be positive.
+    :precondition: Upper must be a positive integer.
     :return: The factorial of upper.
     """
     return factorial_recursive_helper(upper)
